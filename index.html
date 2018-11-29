@@ -1,1 +1,41 @@
-welcome
+<!DOCTYPE>
+<html>
+    <head>        
+        <link rel="stylesheet" href="style.min.css" />
+        <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="image-slice.min.js"></script>
+    </head>
+    <body>
+        
+        <div class="wrapper">            
+            <div id="imageslice" class="imageslice"></div>
+        </div>
+        
+        <script type="text/javascript">
+            $(function(){
+				load_imageSlice();
+			
+				var padding = 0;
+				setInterval(function(){
+					padding = (padding == 0) ? 15 : 0;	
+					$('#imageslice').html('');					
+					load_imageSlice(padding);
+				}, 3000);
+                
+            });
+			function load_imageSlice(padding = 0){
+				$('.imageslice').imageSlice({
+                    height : 120,
+                    width : 160,
+                    count : 16,
+                    column : 4,
+                    padding : padding,
+                    path : 'images/',
+                    prefix : 'image_',
+                    extention : 'png',
+                });
+			}
+        </script>
+        
+    </body>
+</html>
