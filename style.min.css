@@ -1,0 +1,1 @@
+body,html{height:100%}.wrapper{position:relative;margin:0 auto;height:100%}#imageslice{position:relative;top:50%;left:50%;transform:translate(-50%,-50%)}.imageslice{position:relative;overflow:hidden}.imageslice:after{clear:both;content:'';display:block}.imageslice img{float:left;display:block}
